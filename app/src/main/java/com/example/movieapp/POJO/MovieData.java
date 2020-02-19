@@ -1,5 +1,10 @@
 package com.example.movieapp.POJO;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "Movies")
 public class MovieData {
     Double popularity,vote_count,vote_average;
     boolean video,adult;
@@ -10,6 +15,8 @@ public class MovieData {
     String title;
     String overview;
     String release_date;
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
     int id;
 public MovieData(){}
     public Double getPopularity() {

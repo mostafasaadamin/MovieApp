@@ -20,4 +20,9 @@ public interface connection {
 
     @GET("3/movie/{movie_id}/videos")
     Call<Videos> getMovieVideos(@Path("movie_id") int movie_id, @Query("api_key") String api_key);
+
+
+    @GET("3/movie/popular")
+    Call<Moviemodel>getAllMoviesPaged(@Query("api_key") String api_key,@Query("page") int page);
+
 }
